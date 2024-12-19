@@ -16,6 +16,7 @@ public class ArraysDemo {
         a[4]=11;
    int b[] ={1,2,3,4,6,7};
    int b1[] ={1,2,3,4,6,7}; //test git
+        // int b1[] ={1,2,3,4,6,7}; //test git
 
    //test is good
         
