@@ -15,6 +15,10 @@ public class ArraysDemo {
         a[3]=19;
         a[4]=11;
    int b[] ={1,2,3,4,6,7};
+   int b1[] ={1,2,3,4,6,7}; //test git
+
+   //test is good
+        
 
         for(int i=0; i<b.length; i++) {
             System.out.println(b[i]); //retrieve values present in that array
