@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel="tests">
+<!--    "tests"sau clasele paralele sau testele pe browsere paralele; avoid classes because of dependencies -->
+<!--    thread is a process, if we want parallel we need to create more threads because of the memory 2-5 is enough, if we create more, it reduces the performance
+we created three testes for serial execution, for parallel we added at suite=tests-->
+    <test verbose="2" preserve-order="true"
+          name="chrome test">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="url" value="https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"/>
+
+        <classes>
+            <class name="DataProvidersTesNg.ParamTest" >
+                <methods>
+                    <include name="testLogo"/>
+                    <include name="testTitle"/>
+                    <include name="testURL"/>
+                    <include name="tearDown"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test verbose="2" preserve-order="true"
+          name="firefox test">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="DataProvidersTesNg.ParamTest">
+                <methods>
+                    <include name="testLogo"/>
+                    <include name="testTitle"/>
+                    <include name="testURL"/>
+                    <include name="tearDown"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test verbose="2" preserve-order="true"
+          name="edge test">
+        <parameter name="browser" value="edge"/>
+        <classes>
+            <class name="DataProvidersTesNg.ParamTest">
+                <methods>
+                    <include name="testLogo"/>
+                    <include name="testTitle"/>
+                    <include name="testURL"/>
+                    <include name="tearDown"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

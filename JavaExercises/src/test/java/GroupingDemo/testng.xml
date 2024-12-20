@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="/home/noemi/Desktop/Project IntelliJ/JavaExercises/src/test/java/GroupingDemo">
+       <groups>
+           <run>
+               <include name="functional"/>
+<!--               <include name="sanity"/>-->
+<!--               <exclude name="regression"/>-->
+           </run>
+
+       </groups>
+
+        <classes>
+            <class name="GroupingDemo.LoginTests"/>
+            <class name="GroupingDemo.SignupTest"/>
+            <class name="GroupingDemo.PaymentTest"/>
+        </classes>
+
+    </test>
+</suite>
